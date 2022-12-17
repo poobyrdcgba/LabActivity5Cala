@@ -22,16 +22,26 @@ public class  LeapYearGUI extends JFrame{
             btnCheckYear.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int input = Integer.parseInt(tfYear.getText());
-                    if(input % 4 == 0) {
-                    JOptionPane.showMessageDialog(panel1, "Leap year");
-                    }
-                    else {
-                        JOptionPane.showMessageDialog(panel1, "Not a leap year");
+                    try {
+                        int input = Integer.parseInt(tfYear.getText());
+                        if(input < 0){
+                            throw new Exception();
+                        }
+                        if (input % 4 == 0) {
+                            JOptionPane.showMessageDialog(panel1, "Leap year");
+                        } else {
+                            JOptionPane.showMessageDialog(panel1, "Not a leap year");
+                        }
+
+
+                    } catch (IllegalArgumentException lettererror) {
+                        JOptionPane.showMessageDialog(panel1, "Do not input letter(s)");
+                    } catch (Exception error) {
+                        JOptionPane.showMessageDialog(panel1, "Input positive integers");
                     }
                 }
             });
-        }
+
 
     }
 
