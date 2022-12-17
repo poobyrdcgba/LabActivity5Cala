@@ -18,13 +18,13 @@ public class FoodOrderGUI extends JFrame{
 
     public static void main(String[] args) {
 
-        SimpleCalcGUI gwapojapon = new SimpleCalcGUI();
-        gwapojapon.setTitle("Simple Calculator");
-        gwapojapon.setContentPane(gwapojapon.CalcuPanel);
-        gwapojapon.setSize(1280, 720);
-        gwapojapon.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        gwapojapon.setVisible(true);
-        gwapojapon.lblResult.setEditable(false);
+        public static void main(String[] args) {
+            FoodOrderGUI gwaps = new FoodOrderGUI();
+            gwaps.setTitle("Food Ordering System");
+            gwaps.setContentPane(app.OrderPanel);
+            gwaps.setSize(1280, 720);
+            gwaps.setDefaultCloseOperation(EXIT_ON_CLOSE);
+            gwaps.setVisible(true);
+        }
 
-    }
 }
