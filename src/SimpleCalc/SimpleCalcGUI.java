@@ -20,5 +20,6 @@ public class SimpleCalcGUI extends JFrame {
         gwapo.setVisible(true);
         gwapo.lblResult.setEditable(false);
 
+
     }
 }
